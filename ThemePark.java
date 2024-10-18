@@ -1,5 +1,4 @@
 //This is the class that contains the actual workings of the program
-//***********************************************************************************************************************
 import java.util.*;
 class ThemePark extends Thread{
     @Override
@@ -9,7 +8,7 @@ class ThemePark extends Thread{
             // sets it as a number between 1 and 1000
             Integer parkGoers = new Random().nextInt(1000)+1;
             Integer max;
-//*******************************************************************************************************************
+
 // this sets up the specifics of each ride, such as their name, how much they carry, and how long they run for
             //ferris wheel
             while(parkGoers > 0){
@@ -24,7 +23,7 @@ class ThemePark extends Thread{
                     parkGoers -= max;}
                 if(parkGoers <= 0){
                     break;}
-//*******************************************************************************************************************
+
                 //Water slide
                 max = new Random().nextInt(40)+20;
                 Thread t2 = new Amusement("Water slide", parkGoers, max,60,30);
@@ -34,7 +33,7 @@ class ThemePark extends Thread{
                     parkGoers -= max;}
                 if(parkGoers <= 0){
                     break;}
-//*********************************************************************************************************************
+
                 //roller coaster
                 max = new Random().nextInt(40)+20;
                 Thread t3 = new Amusement("Roller coaster", parkGoers, max,60,240);
@@ -44,7 +43,7 @@ class ThemePark extends Thread{
                     parkGoers -= max;}
                 if(parkGoers <= 0){
                     break;}
-//***********************************************************************************************************************
+
                 //tower of terror
                 max = new Random().nextInt(40)+20;
                 Thread t4 = new Amusement("Tower of terror", parkGoers, max,60,160);
@@ -54,7 +53,7 @@ class ThemePark extends Thread{
                     parkGoers -= max;}
                 if(parkGoers <= 0){
                     break;}
-//***********************************************************************************************************************
+
                 //roller coaster 2
                 max = new Random().nextInt(40)+20;
                 Thread t5 = new Amusement("Roller Coaster #2", parkGoers, max,20,120);
@@ -64,15 +63,14 @@ class ThemePark extends Thread{
                     parkGoers -= max;}
                 if(parkGoers <= 0){
                     break;}}
-//**************************************************************************************************************************
+
             // ends the loop and prints "out of attendees" message
             System.out.println("All passengers have now boarded...");}
-//**********************************************************************************************************************
         catch(Exception e){
 // Throw an exception and print error message
             System.out.println(e);
         System.out.println("error with threads");}}
-//************************************************************************************************************************
+
     //creates new class thread
     public static void main(String[] args){
         Thread m = new ThemePark();
